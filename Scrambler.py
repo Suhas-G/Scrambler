@@ -21,9 +21,9 @@ LOAD_BG=( 150,250,50)
 PLAY_BG=(250,150,250)
 
 #images
-red_button=pygame.image.load('red_button.jpeg')
-blue_button=pygame.image.load('blue_button.jpeg')
-yellow_button=pygame.image.load('yellow_button.jpeg')
+red_button=pygame.image.load('resources/red_button.jpeg')
+blue_button=pygame.image.load('resources/blue_button.jpeg')
+yellow_button=pygame.image.load('resources/yellow_button.jpeg')
 
 
 def terminate():
@@ -73,7 +73,7 @@ def start_animation(game_started):
     quit_txt.set_colorkey(WHITE)
     quit_txt.convert_alpha()
 
-    sound_img=pygame.image.load('sound_img.jpeg')
+    sound_img=pygame.image.load('resources/sound_img.jpeg')
     sound_img=pygame.transform.scale(sound_img,(35,35))
     sound_img_rect=sound_img.get_rect(bottomright=(WINWIDTH-20,WINHEIGHT-20))
     scrambler_rect=scrambler_txt.get_rect(midbottom=(WINWIDTH/2,WINHEIGHT/2))
@@ -217,7 +217,7 @@ def load_image(image_loaded):
             elif event.type==MOUSEBUTTONUP:
                 mousex,mousey=event.pos
                 if example_rect.left<mousex<example_rect.right and example_rect.top<mousey<example_rect.bottom:
-                    pic_file='example_pic.jpeg'
+                    pic_file='resources/example_pic.jpeg'
                     selected='example'
                     path=1
                 elif load_new_rect.left<mousex<load_new_rect.right and load_new_rect.top<mousey<load_new_rect.bottom:
@@ -717,7 +717,7 @@ def play_game(level):
 
 def main():
     pygame.init()
-    pygame.mixer.music.load('background.mp3')
+    pygame.mixer.music.load('resources/background.mp3')
     pygame.mixer.music.play(-1,0.0)
     pygame.mixer.music.set_volume(0.20)
     global fpsClock,FPS,SURFACE,pic
