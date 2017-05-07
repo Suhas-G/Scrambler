@@ -6,3 +6,5 @@ It has the following features.
 3. Setting game difficulty.
 4. Previewing the image at any point after game has started.
 5. Ask the computer to solve the puzzle.
+
+A windows installer for the game can be found in the /dist folder
